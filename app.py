@@ -104,6 +104,7 @@ elif mode == "AI Battle Advisor":
         Scenarios: {scenario_db}
         Do not hallucinate commanders outside this data. Be direct and concise.
         CRITICAL RULE: You must detect the language of the user's input and write your entire response in that exact same language.
+        CRITICAL RULE: At the very end of every single response, you must provide two highly specific follow-up questions the user should ask next based on the context of the conversation. Format them as bullet points under the heading 'Strategic Follow-Ups:'
         """
         
         st.session_state.messages = [
@@ -145,6 +146,7 @@ elif mode == "AI Battle Advisor":
             except Exception as e:
 
                 st.error(f"API Error: {e}")
+
 
 
 
