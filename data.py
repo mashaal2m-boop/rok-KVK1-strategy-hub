@@ -1,275 +1,245 @@
-commander_db = [
-    {
-        "name": "Yi Seong-Gye (YSG)",
-        "rarity": "Legendary",
-        "acquisition": "Wheel of Fortune (Approx. Day 94)",
+commander_db = {
+    "Yi Seong-Gye (YSG)": {
         "role": "AoE Nuke / Garrison",
-        "pros": ["Circular 360-degree AoE expertise", "Massive rage restoration", "Extreme longevity into SoC"],
-        "cons": ["Low defensive base stats (Priority Target)", "Requires full expertise to be effective"],
-        "summary": "The most important Season 1 investment; his circular AoE defines the murder ball meta and punishments poor enemy positioning."
+        "tier": "S-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 690,
+        "golden_rule": "The circular AoE is non-negotiable for competitive play. Do not leave him at 5511 or you waste his greatest tactical advantage."
     },
-    {
-        "name": "Richard I",
-        "rarity": "Legendary",
-        "acquisition": "Wheel of Fortune (Approx. Day 38)",
+    "Richard I": {
         "role": "Tank / Barbarian Chaining",
-        "pros": ["Unmatched healing and sustain", "Cornerstone of infinite barbarian chaining", "Powerful slow debuff"],
-        "cons": ["High hospital bill due to healing mechanics", "Low damage output", "Value drops post-KvK 1"],
-        "summary": "The immovable object of the early game; essential for efficient Honor Point farming and field control."
+        "tier": "S-Tier",
+        "min_skills": "5111",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Expertising Richard is a trap for F2P players as he lacks late-game damage. Stop at 5511 and save your heads for YSG."
     },
-    {
-        "name": "Minamoto no Yoshitsune",
-        "rarity": "Legendary",
-        "acquisition": "VIP Chests",
+    "Minamoto no Yoshitsune": {
         "role": "Single Target Nuke / Fort Rally",
-        "pros": ["Highest single-target burst in S1", "Immediate availability for spenders", "Indispensable for barbarian forts"],
-        "cons": ["Completely paywalled", "Melts under focus fire", "Relegated to PvE in later seasons"],
-        "summary": "The premier cavalry 'assassin' of Season 1; provides immediate power for spenders without consuming Gold Heads."
+        "tier": "A-Tier",
+        "min_skills": "5111",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "He is the most cost-effective Legendary for spenders since he uses no universal sculptures. If you are F2P, ignore his existence entirely."
     },
-    {
-        "name": "Charles Martel",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Mightiest Governor",
+    "Charles Martel": {
         "role": "Garrison Captain / Open Field Tank",
-        "pros": ["Shield absorption avoids hospital fill", "High counter-attack damage punishes swarms", "Longevity via Museum Relics"],
-        "cons": ["Extremely slow mobility", "Hard to target skill-ups for low spenders"],
-        "summary": "The premier garrison defender of Season 1; his shield and counter-attack mechanics make him an economical frontline choice."
+        "tier": "A-Tier",
+        "min_skills": "5511",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Never use universal sculptures on him because he is available in Gold Keys. He is the only S1 garrison who holds value into SoC via museum relics."
     },
-    {
-        "name": "Cao Cao",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Daily Special Offer",
+    "Cao Cao": {
         "role": "Farm Killer / Mobility",
-        "pros": ["Highest mobility in Season 1", "Massive 40% attack reduction debuff", "Excellent for hit-and-run tactics"],
-        "cons": ["Very low defense stats", "Inconsistent acquisition through RNG"],
-        "summary": "The tactical scalpel of the cavalry force; dictates engagement terms and excels at asymmetric warfare and harassment."
+        "tier": "B-Tier",
+        "min_skills": "5111",
+        "optimal_skills": "5111",
+        "sculpture_cost_to_optimal": 50,
+        "golden_rule": "Using universal sculptures on Cao Cao is a massive trap for your account's progress. Use him strictly for mobility and farm hunting, never as a primary frontline fighter."
     },
-    {
-        "name": "Aethelflaed",
-        "rarity": "Legendary",
-        "acquisition": "Expedition Store",
+    "Aethelflaed": {
         "role": "F2P AoE Support / Debuffer",
-        "pros": ["Completely free to expertise", "Devastating -30% stat debuff to 5 targets", "Force multiplier for allies"],
-        "cons": ["Primary target for enemies", "Extremely squishy with zero mobility"],
-        "summary": "The 'Queen of F2P'; her massive semi-circle debuffs can neuter an entire enemy frontline when positioned safely."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "She is a glass cannon support; always hide her as a secondary commander to prevent being targeted first. Since she is free, there is no excuse for not having her expertised."
     },
-    {
-        "name": "Sun Tzu",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Sun Tzu": {
         "role": "Open Field AoE / City Garrison",
-        "pros": ["Elite rage restoration per target hit", "Top-tier AoE nuke", "Deceptively tanky with 10% damage reduction"],
-        "cons": ["Priority target in group fights", "Epic-tier stat limitations"],
-        "summary": "Widely considered a 'Legendary in Disguise'; the absolute priority for every player due to his infinite rage potential."
+        "tier": "S-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "The best commander in Season 1 regardless of rarity. Every player must expertise him immediately to anchor their infantry marches."
     },
-    {
-        "name": "Bjorn Ironside",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Bjorn Ironside": {
         "role": "Primary Infantry Lead",
-        "pros": ["Increases skill damage taken by targets", "Perfect synergy with Sun Tzu", "Reliable infantry stats"],
-        "cons": ["Lacks longevity compared to Sun Tzu", "Squishier than specialized tanks"],
-        "summary": "The best primary partner for Sun Tzu; his skill damage amplification allows Epic marches to trade against Legendaries."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Must be the primary commander for Sun Tzu to apply his skill damage debuff first. Do not run him as a secondary or you lose his main benefit."
     },
-    {
-        "name": "Joan of Arc",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Joan of Arc": {
         "role": "Universal Support / Gathering",
-        "pros": ["Massive multi-troop buffs for all allies", "Elite gathering speed", "Passive rage battery for the murder ball"],
-        "cons": ["Zero personal combat threat", "Always targeted first by experienced players"],
-        "summary": "The ultimate force multiplier; mandatory for every account to sustain the war effort and buff alliance deathballs."
+        "tier": "S-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Bringing Joan to the field is a sacrifice play; she will be swarmed instantly. Hide her behind a tank like Richard or Scipio to keep the buffs active."
     },
-    {
-        "name": "Baibars",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Baibars": {
         "role": "Cavalry AoE / Hit-and-Run",
-        "pros": ["Only Epic cavalry with 5-target AoE", "Powerful slow effect", "Speed boost upon leaving battle"],
-        "cons": ["Very low defense; glass cannon", "Melts if caught by infantry"],
-        "summary": "The standard F2P cavalry solution for field fights, providing vital AoE presence and battlefield tempo control."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "The only viable F2P cavalry AoE option in Season 1. Use him to slow enemies in ruins fights, but disengage the moment you are targeted."
     },
-    {
-        "name": "Hermann",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Hermann": {
         "role": "Control / Silence",
-        "pros": ["2-second silence disrupts skill cycles", "High march speed for archers", "Reduces enemy rage"],
-        "cons": ["Highly vulnerable to cavalry", "Low damage factor"],
-        "summary": "A tactical disabler used to shut down enemy rage-dependent nukers like YSG and Sun Tzu."
+        "tier": "B-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "His silence is his only value; use him to disrupt YSG cycles. He is extremely squishy and will melt to any focused cavalry march."
     },
-    {
-        "name": "Kusunoki Masashige",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Kusunoki Masashige": {
         "role": "Cleanse / AoE Nuke",
-        "pros": ["Removes all negative debuffs/effects", "Circular AoE damage", "Counter-meta utility"],
-        "cons": ["Average base stats", "Niche utility compared to pure nukers"],
-        "summary": "The 'Antidote' to a debuff-heavy meta; ensures your march remains effective by cleansing slows and poisons."
+        "tier": "B-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Useful specifically as a counter-pick to debuff-heavy marches. If you aren't facing Aethelflaed or Hermann, Sun Tzu is always the better choice."
     },
-    {
-        "name": "Julius Caesar",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Mightiest Governor",
+    "Julius Caesar": {
         "role": "Early Game Stat Stick",
-        "pros": ["Increased troop capacity", "Universal buffs", "Strong in the first weeks"],
-        "cons": ["No AoE damage", "Investment trap (Do not use Gold Heads)", "Becomes obsolete rapidly"],
-        "summary": "A relic of the past meta; useful only if expertised early by luck or if playing in the server's first month."
+        "tier": "Trap",
+        "min_skills": "5111",
+        "optimal_skills": "5111",
+        "sculpture_cost_to_optimal": 50,
+        "golden_rule": "A total investment trap that offers zero value after the first 30 days of a kingdom. Never spend a single universal sculpture on this commander."
     },
-    {
-        "name": "Mehmed II",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys",
+    "Mehmed II": {
         "role": "Rally Secondary / AoE Nuke",
-        "pros": ["10% troop capacity buff", "Flexible troop requirements", "High city-cracking damage"],
-        "cons": ["Zero defensive utility", "Hard to expertise for non-whales"],
-        "summary": "A versatile wildcard; excellent for city rallies and as a secondary nuker to YSG for pure damage output."
+        "tier": "B-Tier",
+        "min_skills": "5111",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "A high-damage secondary who is only viable if you get lucky with Gold Keys. Do not prioritize him over YSG for sculpture investment."
     },
-    {
-        "name": "Belisarius",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Belisarius": {
         "role": "Mobility / Farm Killer",
-        "pros": ["Elite march speed", "High execution damage to low HP targets", "Strong debuffs"],
-        "cons": ["Weak in fair 1v1 fights", "No frontline utility"],
-        "summary": "A specialized harasser/assassin; used for hunting gatherers and finishing off retreating enemies."
+        "tier": "B-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Strictly a utility commander for hunting gatherers or running runes. Bringing him to a major field battle is a waste of a march slot."
     },
-    {
-        "name": "Thutmose III",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Wheel",
+    "Thutmose III": {
         "role": "Anti-Heal / Archer Nuke",
-        "pros": ["Hard counter to healing (Richard/Martel)", "Provides Archer march speed", "High damage output"],
-        "cons": ["Requires full Archer march for passives", "Vulnerable to cavalry swarms"],
-        "summary": "A 'New Meta' commander designed to disrupt the Richard I sustain era with powerful anti-healing debuffs."
+        "tier": "A-Tier",
+        "min_skills": "5511",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Specifically designed to counter the Richard I meta with anti-healing. Only invest if you are a committed Archer main in a new kingdom."
     },
-    {
-        "name": "Pyrrhus",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Wheel",
+    "Pyrrhus": {
         "role": "Infantry Bruiser",
-        "pros": ["Balanced shield and nuke", "Skill damage resistance", "Available via Gold Keys"],
-        "cons": ["Master of none; out-tanked by Martel", "Competes for infantry resources"],
-        "summary": "A modern infantry alternative that offers a mix of survivability and offensive pressure."
+        "tier": "B-Tier",
+        "min_skills": "5511",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Decent hybrid of tank and nuke, but outclassed by the synergy of Bjorn/Sun Tzu for F2P. Do not spend universal heads here if you have YSG available."
     },
-    {
-        "name": "Hannibal Barca",
-        "rarity": "Legendary",
-        "acquisition": "VIP Chests (VIP 10-14)",
+    "Hannibal Barca": {
         "role": "Whale Support / Mixed Rally",
-        "pros": ["Strong target debuffs", "Excellent for early mixed-troop rallies"],
-        "cons": ["Exorbitant real-world cost", "Becomes obsolete extremely quickly"],
-        "summary": "A dominance tool for high spenders in the server's infancy; irrelevant for the general player base."
+        "tier": "Trap",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Only accessible via high VIP spend; he is a total trap for mid-spenders. His utility evaporates the moment specialized troop types become standard in KvK 1."
     },
-    {
-        "name": "El Cid",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Mightiest Governor",
+    "El Cid": {
         "role": "Disabler",
-        "pros": ["Silence/Disarm mechanic", "Rare source of Archer mobility"],
-        "cons": ["Outclassed by modern Archers", "Poor use of Gold Heads"],
-        "summary": "A bridge commander; provides decent crowd control but is generally not worth active investment."
+        "tier": "Trap",
+        "min_skills": "5111",
+        "optimal_skills": "5111",
+        "sculpture_cost_to_optimal": 50,
+        "golden_rule": "A massive sculpture trap that is outclassed by every modern Archer legendary. Leave him in the tavern and never look back."
     },
-    {
-        "name": "Ragnar Lodbrok",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys",
+    "Ragnar Lodbrok": {
         "role": "Mixed Troop Rally",
-        "pros": ["Universal stat buffs", "Flexible troop composition"],
-        "cons": ["Lacks direct nuke damage", "Outclassed by almost every other Legendary"],
-        "summary": "Generally considered a low-priority 'Leadership' commander with a lack of specialization."
+        "tier": "Trap",
+        "min_skills": "5111",
+        "optimal_skills": "5111",
+        "sculpture_cost_to_optimal": 50,
+        "golden_rule": "One of the weakest legendaries in the game with no specialized niche. Spending sculptures on Ragnar is a catastrophic waste of resources."
     },
-    {
-        "name": "Frederick I",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys",
+    "Frederick I": {
         "role": "City Smasher",
-        "pros": ["Massive troop capacity bonus", "Nuke/Heal hybrid"],
-        "cons": ["Active skill is RNG-dependent (80%)", "Too expensive for limited returns"],
-        "summary": "A 'Super Osman' primarily seen in city rallies during the first weeks of a kingdom."
+        "tier": "Trap",
+        "min_skills": "5111",
+        "optimal_skills": "5111",
+        "sculpture_cost_to_optimal": 50,
+        "golden_rule": "His RNG-based skills make him unreliable for serious combat. He is an investment trap that offers no longevity in the competitive meta."
     },
-    {
-        "name": "Osman I",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Osman I": {
         "role": "Single Target Nuke",
-        "pros": ["Highest single-target damage among Epics", "10% troop capacity buff"],
-        "cons": ["Zero utility (no buffs/debuffs)", "No AoE"],
-        "summary": "A raw damage dealer best used as a budget secondary for pure burst pressure."
+        "tier": "B-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Good for raw burst damage but offers zero utility to your alliance. Only use him as a secondary for Minamoto or Pelagius."
     },
-    {
-        "name": "Pelagius",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Pelagius": {
         "role": "Cavalry Tank",
-        "pros": ["Excellent sustain and healing", "Fast skill cycling", "Solid duelist"],
-        "cons": ["Lacks AoE impact for large battles"],
-        "summary": "The defensive anchor for Epic cavalry; reliable for 1v1s and small skirmishes."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "The most reliable F2P cavalry primary due to his sustain and rage restoration. Use him to anchor your cavalry march until you get a better legendary."
     },
-    {
-        "name": "Eulji Mundeok",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Eulji Mundeok": {
         "role": "Infantry Duelist",
-        "pros": ["Strong -30% defense break", "Balanced stats"],
-        "cons": ["Outclassed by Bjorn/Sun Tzu combo", "Lacks AoE synergy"],
-        "summary": "A sturdy infantry choice that has largely been retired in favor of modern Epic synergies."
+        "tier": "C-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "He has been almost entirely replaced by Bjorn Ironside in the meta. Do not prioritize him unless you have no other infantry options."
     },
-    {
-        "name": "Scipio Africanus (Epic)",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Scipio Africanus (Epic)": {
         "role": "Leadership Tank",
-        "pros": ["High damage reduction", "Survives swarms well"],
-        "cons": ["Zero skill damage dealt", "Ignored by savvy enemies"],
-        "summary": "A meat shield used to hold support commanders like Joan of Arc in the field longer."
+        "tier": "B-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "A pure damage sponge with zero threat. Only use him to carry Joan of Arc in the field so she can survive longer."
     },
-    {
-        "name": "Imhotep",
-        "rarity": "Epic",
-        "acquisition": "Tavern / Civilization Choice",
+    "Imhotep": {
         "role": "Support Debuffer",
-        "pros": ["Increases damage taken by enemies", "Disrupts enemy rage/combos", "Mini-Aethelflaed utility"],
-        "cons": ["Requires protection; low defenses"],
-        "summary": "A top-tier support commander who multiplies alliance damage through devastating debuffs."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "One of the best supports in Season 1 due to his rage reduction. Always pair him with a tanky primary to ensure he stays in the fight."
     },
-    {
-        "name": "Lohar",
-        "rarity": "Epic",
-        "acquisition": "Lohar's Trial Event",
+    "Lohar": {
         "role": "XP Farming (Peacekeeping)",
-        "pros": ["70% experience boost for partners", "Infinite barbarian chaining sustain"],
-        "cons": ["Useless in PvP combat", "Strategic error to use in war"],
-        "summary": "A mandatory tool for account growth; use him strictly for leveling combat commanders against barbarians."
+        "tier": "Trap",
+        "min_skills": "5511",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Strictly for barbarians and guardians. Bringing Lohar to a PvP fight is a sign of incompetence and will result in massive losses."
     },
-    {
-        "name": "Matilda of Flanders",
-        "rarity": "Epic",
-        "acquisition": "Tavern",
+    "Matilda of Flanders": {
         "role": "Gathering / Canyon Tank",
-        "pros": ["10% extra resources upon completion", "High defensive stats for Sunset Canyon"],
-        "cons": ["Siege unit focus", "Useless in open field war"],
-        "summary": "The best Epic gatherer who doubles as a surprisingly durable meat shield in arena modes."
+        "tier": "A-Tier",
+        "min_skills": "Expertise",
+        "optimal_skills": "Expertise",
+        "sculpture_cost_to_optimal": 0,
+        "golden_rule": "Elite for gathering but surprisingly viable as a stall tank in Sunset Canyon. Never use her in the open field against other players."
     },
-    {
-        "name": "Seondeok",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys",
+    "Seondeok": {
         "role": "Gold Gathering",
-        "pros": ["10% extra resource generation", "Elite gold gathering speed"],
-        "cons": ["Zero combat value"],
-        "summary": "The queen of gold gathering; critical for sustaining the high costs of T5 troop healing."
+        "tier": "B-Tier",
+        "min_skills": "5511",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Critical for end-game gold gathering but never spend universal heads on her. Level her passively through gold keys only."
     },
-    {
-        "name": "Cleopatra VII",
-        "rarity": "Legendary",
-        "acquisition": "Gold Keys / Strategic Reserve",
+    "Cleopatra VII": {
         "role": "Stone Gathering",
-        "pros": ["Stone gathering specialist", "Minor healing utility"],
-        "cons": ["Very slow march speed", "Combat irrelevant"],
-        "summary": "A dedicated stone gatherer; recommended to level only for economic passive talents."
+        "tier": "B-Tier",
+        "min_skills": "5511",
+        "optimal_skills": "5511",
+        "sculpture_cost_to_optimal": 190,
+        "golden_rule": "Strictly for resource nodes. If you see her in a field battle, she is a free kill for anyone nearby."
     }
-]
+}
 
 pairing_db = [
     {
@@ -1009,4 +979,5 @@ The Trap: While 5-10 enemies are hitting the unkillable Martel/Richard, the whal
 Counter: Smart enemies will ignore this march. If ignored, it contributes nothing to the fight.
 """
     }
+
 ]
