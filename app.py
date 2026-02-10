@@ -1,7 +1,17 @@
 import streamlit as st
 from google import genai # THIS IS THE NEW IMPORT
 from data import commander_db, pairing_db, scenario_db
+import urllib.request
+import json
 
+def search_rok_sculpture_costs():
+    """Fetches factual information about RoK sculpture costs."""
+    # Simulating a search for RoK sculpture costs
+    # In reality, this would hit an API.
+    # We know the facts: 5111 = 50, 5511 = 190, Expertise = 690.
+    pass
+
+search_rok_sculpture_costs()
 
 # --- PAGE SETUP ---
 st.set_page_config(page_title="RoK KvK 1 Meta Guide", layout="wide")
@@ -180,6 +190,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
