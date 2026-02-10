@@ -135,7 +135,7 @@ elif mode == "AI Battle Advisor":
                 
                 # The modern API call
                 response = client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-2.5-flash-lite',
                     contents=full_prompt
                 )
                 ai_answer = response.text
@@ -146,6 +146,7 @@ elif mode == "AI Battle Advisor":
             except Exception as e:
 
                 st.error(f"API Error: {e}")
+
 
 
 
