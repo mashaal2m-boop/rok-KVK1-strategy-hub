@@ -123,10 +123,6 @@ elif mode == "AI Battle Advisor":
     if prompt := st.chat_input("Ask about KvK 1 strategies..."):
         
         # Add user's message to UI and memory
-        # 3. The Input Box
-    if prompt := st.chat_input("Ask about KvK 1 strategies..."):
-        
-        # Add user's message to UI and memory
         with st.chat_message("user"):
             st.markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
@@ -183,6 +179,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
