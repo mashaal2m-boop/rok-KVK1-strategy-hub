@@ -90,7 +90,7 @@ elif mode == "AI Battle Advisor":
     st.header("🤖 The War Room (AI Assistant)")
     
     # Initialize the new Gemini Client
-    client = genai.Client(api_key="YOUR_GEMINI_KEY_HERE")
+    client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
     
     # 1. Initialize the chat memory
     if "messages" not in st.session_state:
@@ -140,4 +140,5 @@ elif mode == "AI Battle Advisor":
                 st.session_state.messages.append({"role": "model", "content": ai_answer})
                 
             except Exception as e:
+
                 st.error(f"API Error: {e}")
