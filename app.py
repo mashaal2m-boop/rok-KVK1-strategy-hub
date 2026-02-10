@@ -89,7 +89,7 @@ elif mode == "Tactical Scenarios":
 elif mode == "AI Battle Advisor":
     st.header("🤖 The War Room (AI Assistant)")
     st.markdown("<p style='text-align: center; color: gray;'>Produced by [MashaalM, also known as ᴵᴮSn1p3r]</p>", unsafe_allow_html=True)
-st.divider()
+    st.divider()
     # Initialize the new Gemini Client
     client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
     
@@ -145,6 +145,7 @@ st.divider()
             except Exception as e:
 
                 st.error(f"API Error: {e}")
+
 
 
 
