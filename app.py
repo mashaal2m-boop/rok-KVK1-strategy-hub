@@ -102,7 +102,9 @@ elif mode == "AI Battle Advisor":
         Pairs: {pairing_db}
         Scenarios: {scenario_db}
         Do not hallucinate commanders outside this data. Be direct and concise.
+        CRITICAL RULE: You must detect the language of the user's input and write your entire response in that exact same language.
         """
+        
         st.session_state.messages = [
             {"role": "model", "content": "Commander, the AI satellite is online. What is your tactical question?"}
         ]
@@ -142,3 +144,4 @@ elif mode == "AI Battle Advisor":
             except Exception as e:
 
                 st.error(f"API Error: {e}")
+
