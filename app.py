@@ -10,7 +10,7 @@ st.title("🛡️ Rise of Kingdoms: KvK 1 Strategy Hub")
 st.write("The ultimate database for Season 1 Commanders and Pairings.")
 
 # --- NAVIGATION ---
-mode = st.sidebar.radio("Navigation", ["Commander Profiles", "Synergy Matrix", "Tactical Scenarios", "AI Battle Advisor"])
+mode = st.sidebar.radio("Navigation", ["AI Battle Advisor", "Commander Profiles", "Synergy Matrix", "Tactical Scenarios"])
 
 # ==========================================
 # MODE 1: COMMANDER PROFILES
@@ -144,4 +144,5 @@ elif mode == "AI Battle Advisor":
             except Exception as e:
 
                 st.error(f"API Error: {e}")
+
 
