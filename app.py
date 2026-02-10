@@ -105,6 +105,7 @@ elif mode == "AI Battle Advisor":
         Do not hallucinate commanders outside this data. Be direct and concise.
         CRITICAL RULE: You must detect the language of the user's input and write your entire response in that exact same language.
         CRITICAL RULE: At the very end of every single response, you must provide two highly specific follow-up questions the user should ask next based on the context of the conversation. Format them as bullet points under the heading 'Strategic Follow-Ups:'
+        When asked about investing in a commander, you must explicitly state their 'min_skills' and 'optimal_skills'. If a player asks about a commander with a strict 'golden_rule' (like Richard I), you must aggressively warn them about it.
         """
         
         st.session_state.messages = [
@@ -179,6 +180,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
