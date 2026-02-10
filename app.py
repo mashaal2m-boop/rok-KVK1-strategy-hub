@@ -118,10 +118,9 @@ elif mode == "AI Battle Advisor":
         CRITICAL RULES:
         1. Do not hallucinate commanders outside this data. Be direct and concise.
         2. You must detect the language of the user's input and write your entire response in that exact same language.
-        3. IF A USER STATES HOW MANY GOLDEN HEADS/SCULPTURES THEY HAVE: You MUST do the math. Compare their current heads to the 'sculpture_cost_to_optimal' or 'min_skills' cost in the mechanics_db. 
-        4. If they do not have enough heads to reach the minimum viable skill level instantly, you MUST TELL THEM NO. Tell them exactly how many more heads they need to save before investing a single sculpture. Do not encourage partial investments.
+        3. RARITY CHECK: You MUST check the commander's "rarity" before giving advice. Epic commanders use ONLY epic (purple) sculptures. Legendary commanders use ONLY legendary (golden) sculptures. Do not mix these up.
+        4. INVESTMENT MATH: If a user states how many heads they have, compare it to the "sculpture_cost_to_optimal" in their profile. If they do not have enough of the CORRECT rarity heads to reach the minimum viable skill level instantly, you MUST TELL THEM NO. 
         5. At the very end of every single response, you must provide two highly specific follow-up questions the user should ask next. Format them as bullet points under the heading '**Strategic Follow-Ups:**'.
-        """
         
         st.session_state.messages = [
             {"role": "model", "content": "Commander, the AI satellite is online. What is your tactical question?"}
@@ -195,6 +194,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
