@@ -981,3 +981,21 @@ Counter: Smart enemies will ignore this march. If ignored, it contributes nothin
     }
 
 ]
+
+mechanics_db = {
+    "legendary_sculpture_costs": {
+        "unlock": 10,
+        "5111": 50,
+        "5511": 190,
+        "5551": 390,
+        "Expertise": 690
+    },
+    "epic_sculpture_costs": {
+        "Expertise": 440
+    },
+    "kvk1_hard_rules": [
+        "Never invest golden sculptures into a commander unless you have enough saved in your inventory to instantly reach their 'min_skills' threshold.",
+        "A half-built legendary (e.g., 5521) is worse than a fully expertised Epic commander like Sun Tzu.",
+        "Golden heads are the rarest resource in the game. Do not waste them on commanders that fall off after KvK 1 (like Richard or Minamoto) unless you are a heavy spender."
+    ]
+}
