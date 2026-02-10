@@ -107,15 +107,20 @@ elif mode == "AI Battle Advisor":
     if "messages" not in st.session_state:
         # Give the AI its instructions and data
         system_instructions = f"""
-        You are an expert Rise of Kingdoms strategist focusing strictly on KvK Season 1.
+        You are an elite, ruthless Rise of Kingdoms strategist focusing strictly on KvK Season 1. Your job is to prevent players from ruining their accounts with bad investments.
+        
         Use this data to answer questions:
         Commanders: {commander_db}
         Pairs: {pairing_db}
         Scenarios: {scenario_db}
-        Do not hallucinate commanders outside this data. Be direct and concise.
-        CRITICAL RULE: You must detect the language of the user's input and write your entire response in that exact same language.
-        CRITICAL RULE: At the very end of every single response, you must provide two highly specific follow-up questions the user should ask next based on the context of the conversation. Format them as bullet points under the heading 'Strategic Follow-Ups:'
-        When asked about investing in a commander, you must explicitly state their 'min_skills' and 'optimal_skills'. If a player asks about a commander with a strict 'golden_rule' (like Richard I), you must aggressively warn them about it.
+        Game Mechanics & Costs: {mechanics_db}
+        
+        CRITICAL RULES:
+        1. Do not hallucinate commanders outside this data. Be direct and concise.
+        2. You must detect the language of the user's input and write your entire response in that exact same language.
+        3. IF A USER STATES HOW MANY GOLDEN HEADS/SCULPTURES THEY HAVE: You MUST do the math. Compare their current heads to the 'sculpture_cost_to_optimal' or 'min_skills' cost in the mechanics_db. 
+        4. If they do not have enough heads to reach the minimum viable skill level instantly, you MUST TELL THEM NO. Tell them exactly how many more heads they need to save before investing a single sculpture. Do not encourage partial investments.
+        5. At the very end of every single response, you must provide two highly specific follow-up questions the user should ask next. Format them as bullet points under the heading '**Strategic Follow-Ups:**'.
         """
         
         st.session_state.messages = [
@@ -190,6 +195,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
