@@ -123,29 +123,67 @@ elif mode == "AI Battle Advisor":
     if prompt := st.chat_input("Ask about KvK 1 strategies..."):
         
         # Add user's message to UI and memory
+        # 3. The Input Box
+    if prompt := st.chat_input("Ask about KvK 1 strategies..."):
+        
+        # Add user's message to UI and memory
         with st.chat_message("user"):
             st.markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        # 4. Call the new Gemini API
+        # 4. Call the AI with a 4-Tier Kingdom Cascade
         with st.chat_message("assistant"):
             try:
-                # Combine instructions and prompt
                 full_prompt = f"{st.session_state.system_prompt}\n\nUser Question: {prompt}"
                 
-                # The modern API call
-                response = client.models.generate_content(
-                    model='gemini-2.5-flash-lite',
-                    contents=full_prompt
-                )
+                # Tier 1: The Elite Engine (gemini-2.5-flash - 20/day)
+                try:
+                    response = client.models.generate_content(
+                        model='gemini-2.5-flash',
+                        contents=full_prompt
+                    )
+                except Exception as e1:
+                    if "429" in str(e1) or "RESOURCE_EXHAUSTED" in str(e1):
+                        
+                        # Tier 2: The Workhorse (gemini-2.5-flash-lite - 1,000/day)
+                        try:
+                            response = client.models.generate_content(
+                                model='gemini-2.5-flash-lite',
+                                contents=full_prompt
+                            )
+                        except Exception as e2:
+                            if "429" in str(e2) or "RESOURCE_EXHAUSTED" in str(e2):
+                                
+                                # Tier 3: The Legacy Engine (gemini-1.5-flash - 1,500/day)
+                                try:
+                                    response = client.models.generate_content(
+                                        model='gemini-1.5-flash',
+                                        contents=full_prompt
+                                    )
+                                except Exception as e3:
+                                    if "429" in str(e3) or "RESOURCE_EXHAUSTED" in str(e3):
+                                        
+                                        # Tier 4: Absolute Last Resort (gemini-1.5-flash-8b - 1,500/day)
+                                        response = client.models.generate_content(
+                                            model='gemini-1.5-flash-8b',
+                                            contents=full_prompt
+                                        )
+                                    else:
+                                        raise e3
+                            else:
+                                raise e2
+                    else:
+                        raise e1
+
+                # Extract and display the answer regardless of which tier succeeded
                 ai_answer = response.text
-                
                 st.markdown(ai_answer)
                 st.session_state.messages.append({"role": "model", "content": ai_answer})
                 
-            except Exception as e:
+            except Exception as final_error:
+                # The ultimate safety net if all 4,020 daily requests are burned
+                st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
 
-                st.error(f"API Error: {e}")
 
 
 
