@@ -1,6 +1,6 @@
 import streamlit as st
 from google import genai # THIS IS THE NEW IMPORT
-from data import commander_db, pairing_db, scenario_db
+from data import commander_db, pairing_db, scenario_db, mechanics_db
 import urllib.request
 import json
 
@@ -195,6 +195,7 @@ elif mode == "AI Battle Advisor":
             except Exception as final_error:
                 # The ultimate safety net if all 4,020 daily requests are burned
                 st.error(f"The War Room is completely out of resources for today. Please wait for the daily reset. Error: {final_error}")
+
 
 
 
